@@ -1,6 +1,7 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import Reveal from "./Reveal";
 
 const SocialMedia = () => {
   const socialMediaLinks = [
@@ -21,18 +22,20 @@ const SocialMedia = () => {
     },
   ];
   return (
-    <div className="flex flex-row gap-4 mt-24">
-      {socialMediaLinks.map(({ name, link, icon }) => (
-        <Link
-          key={name}
-          href={link}
-          target="_blank"
-          className="bg-[#9bb3cb] p-2 rounded-lg dark:text-[#09090b] dark:shadow-[5px_5px_0px_0px_rgba(257,257,257)] shadow-[5px_5px_0px_0px_rgba(000,000,000,0.2)]"
-        >
-          {icon}
-        </Link>
-      ))}
-    </div>
+    <Reveal>
+      <div className="flex flex-row gap-4 ">
+        {socialMediaLinks.map(({ name, link, icon }) => (
+          <Link
+            key={name}
+            href={link}
+            target="_blank"
+            className="bg-[#9bb3cb] p-2 rounded-lg dark:text-[#09090b] dark:shadow-[5px_5px_0px_0px_rgba(257,257,257)] shadow-[5px_5px_0px_0px_rgba(000,000,000,0.2)]"
+          >
+            {icon}
+          </Link>
+        ))}
+      </div>
+    </Reveal>
   );
 };
 

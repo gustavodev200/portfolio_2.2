@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={GeistMono.className}>
+    <html lang="en" style={{ scrollBehavior: "smooth" }}>
+      <body className={` ${GeistMono.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
