@@ -74,9 +74,12 @@ export const NavBar = () => {
               <NavigationMenuList>
                 <NavigationMenuItem className="flex flex-col gap-4  md:flex-row ">
                   {linksForNavBar.map((link) => (
-                    // <Link href="#" legacyBehavior passHref key={link.name}>
+                    // <Link legacyBehavior passHref key={link.name} href={""}>
                     <NavigationMenuLink
                       key={link.name}
+                      style={{
+                        cursor: "pointer",
+                      }}
                       className={navigationMenuTriggerStyle()}
                       onClick={() => {
                         scrollToAnchor(link.path);

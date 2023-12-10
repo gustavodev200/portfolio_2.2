@@ -7,20 +7,19 @@ export const getTechnologyColor = (technology: string): string => {
     case "Typescript":
       return "#007acc";
     case "Next.js":
-      return "#000000";
+      return "#787878";
     case "Tailwind CSS":
       return "#06b6d4";
     case "Vite":
       return "#646cff";
-    case "JavaScript":
-      return "#f0db4f";
+    case "Javascript":
+      return "#FFD133";
     case "HTML":
       return "#e34c26";
     case "CSS":
       return "#563d7c";
     case "EJS":
       return "#b7b7b7";
-
     default:
       return "#9bb3cb";
   }

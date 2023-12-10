@@ -1,4 +1,4 @@
-const useScrollToAnchor = (offset: number = 130) => {
+const useScrollToAnchor = (offset: number = 100) => {
   return (targetAnchor: string) => {
     if (!(typeof window === "undefined")) {
       const hash = targetAnchor;

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { SliderComponent } from "../SliderComponent";
+import Reveal from "../Reveal";
 
 interface ProjectContentProps {
   imageUrl: string[];
