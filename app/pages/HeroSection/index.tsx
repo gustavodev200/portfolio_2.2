@@ -13,7 +13,10 @@ import Reveal from "@/components/Reveal";
 export const HeroSection = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between items-center w-full h-screen">
+      <div
+        className="flex flex-col md:flex-row justify-between items-center w-full h-screen"
+        id="home"
+      >
         <div className="flex flex-col items-start ">
           <div>
             <Reveal>

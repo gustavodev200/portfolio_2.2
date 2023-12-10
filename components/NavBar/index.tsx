@@ -13,11 +13,12 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import useScrollToAnchor from "@/hooks/useScrollToAnchor";
 
 const linksForNavBar = [
   {
     name: "Home",
-    path: "/",
+    path: "#home",
     icon: "",
   },
   {
@@ -45,11 +46,13 @@ const linksForNavBar = [
 
 export const NavBar = () => {
   const [state, setState] = React.useState(false);
+
+  const scrollToAnchor = useScrollToAnchor();
   return (
     <nav className=" w-full  md:border-0 fixed top-0 left-0 dark:bg-[#09090b] bg-white z-30 shadow-sm">
       <div className="items-center px-2 lg:px-0 max-w-screen-xl mx-auto md:flex">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
-          <Link href="#">
+          <Link href="#home">
             <NavBarLogo />
           </Link>
           <div className="md:hidden">
@@ -71,18 +74,17 @@ export const NavBar = () => {
               <NavigationMenuList>
                 <NavigationMenuItem className="flex flex-col gap-4  md:flex-row ">
                   {linksForNavBar.map((link) => (
-                    <Link
-                      href={link.path}
-                      legacyBehavior
-                      passHref
+                    // <Link href="#" legacyBehavior passHref key={link.name}>
+                    <NavigationMenuLink
                       key={link.name}
+                      className={navigationMenuTriggerStyle()}
+                      onClick={() => {
+                        scrollToAnchor(link.path);
+                      }}
                     >
-                      <NavigationMenuLink
-                        className={navigationMenuTriggerStyle()}
-                      >
-                        {link.name}
-                      </NavigationMenuLink>
-                    </Link>
+                      {link.name}
+                    </NavigationMenuLink>
+                    // </Link>
                   ))}
                   <NavBarTheme />
                 </NavigationMenuItem>

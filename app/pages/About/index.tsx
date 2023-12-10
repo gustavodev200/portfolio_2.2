@@ -15,7 +15,7 @@ const tecnologies = [
 
 const About = () => {
   return (
-    <div className="w-full h-[100vh] flex flex-col" id="about">
+    <div className="w-full h-[90vh] flex flex-col" id="about">
       <TitlePage text="Sobre" />
 
       <main className="grid md:grid-cols-2 mt-[4rem]">

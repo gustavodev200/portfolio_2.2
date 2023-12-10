@@ -24,7 +24,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex justify-center flex-col mx-auto max-w-7xl gap-2">
+          <div className="flex justify-center flex-col mx-auto max-w-7xl gap-2 h-auto">
             <NavBar />
             {children}
           </div>
