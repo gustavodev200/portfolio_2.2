@@ -6,7 +6,7 @@ interface Props {
 
 const ProjectDescription = ({ description }: Props) => {
   return (
-    <div className="w-full text-justify mt-5">
+    <div className="w-full text-center md:text-justify mt-5">
       <span className="font-bold">{description}</span>
     </div>
   );

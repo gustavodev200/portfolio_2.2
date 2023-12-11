@@ -6,10 +6,13 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <section className="w-full h-auto flex flex-col z-20 mb-20" id="projects">
+    <section
+      className="w-full h-auto flex flex-col z-20 mb-20 md:p-10 lg:p-10 xl:p-0"
+      id="projects"
+    >
       <TitlePage text="Projetos" />
 
-      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16 mt-[1.5rem]">
+      <main className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-16 mt-[1.5rem]">
         {projectData.map((project) => (
           <Project.Root key={project.id} {...project}>
             <Project.Image imageUrl={project.images} />

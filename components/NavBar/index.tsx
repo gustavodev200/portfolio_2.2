@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import useScrollToAnchor from "@/hooks/useScrollToAnchor";
+import { Toggle } from "@/components/ui/toggle";
 
 const linksForNavBar = [
   {
@@ -49,12 +50,16 @@ export const NavBar = () => {
 
   const scrollToAnchor = useScrollToAnchor();
   return (
-    <nav className=" w-full  md:border-0 fixed top-0 left-0 dark:bg-[#09090b] bg-white z-30 shadow-sm">
+    <nav className=" w-full  md:border-0 fixed top-0 left-0 dark:bg-[#09090b] bg-white z-30 shadow-sm md:px-10 lg:px-10">
       <div className="items-center px-2 lg:px-0 max-w-screen-xl mx-auto md:flex">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
-          <Link href="#home">
+          <button
+            onClick={() => {
+              scrollToAnchor("#home");
+            }}
+          >
             <NavBarLogo />
-          </Link>
+          </button>
           <div className="md:hidden">
             <button
               className=" outline-none p-2 rounded-md  focus:border"
@@ -69,12 +74,11 @@ export const NavBar = () => {
             state ? "block" : "hidden"
           }`}
         >
-          <ul className="justify-end items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+          <ul className="flex justify-center md:justify-end items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
             <NavigationMenu>
               <NavigationMenuList>
-                <NavigationMenuItem className="flex flex-col gap-4  md:flex-row ">
+                <NavigationMenuItem className="flex items-center md:items-start flex-col gap-4 md:gap-0 lg:gap-4 md:flex-row ">
                   {linksForNavBar.map((link) => (
-                    // <Link legacyBehavior passHref key={link.name} href={""}>
                     <NavigationMenuLink
                       key={link.name}
                       style={{
@@ -87,7 +91,6 @@ export const NavBar = () => {
                     >
                       {link.name}
                     </NavigationMenuLink>
-                    // </Link>
                   ))}
                   <NavBarTheme />
                 </NavigationMenuItem>

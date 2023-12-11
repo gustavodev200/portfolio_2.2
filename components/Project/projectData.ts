@@ -35,7 +35,14 @@ export const projectData: ProjectData[] = [
     title: "Odonto Clean - Open Source",
     description:
       "Trabalhei em um projeto com amigos, focado em aprender juntos e aprimorar nossas habilidades de trabalho em equipe. No projeto, eu era responsável por desenvolver algumas telas junto com outros colegas do time de front-end. Foi uma experiência legal de colaboração e crescimento mútuo.",
-    technologies: ["Javascript", "React", "Next.js", "Tailwind CSS"],
+    technologies: [
+      "Javascript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Vite",
+      "Node.js",
+    ],
     github: "https://github.com/spaceowls/collab-bingo",
   },
 

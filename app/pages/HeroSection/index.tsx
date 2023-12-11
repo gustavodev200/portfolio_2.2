@@ -14,13 +14,13 @@ export const HeroSection = () => {
   return (
     <>
       <div
-        className="flex flex-col md:flex-row justify-between items-center w-full h-screen"
+        className="flex flex-col md:flex-row justify-between items-center w-full h-auto md:h-screen mt-28 md:mt-0 md:p-10 lg:p-10 xl:p-0"
         id="home"
       >
-        <div className="flex flex-col items-start ">
+        <div className="flex flex-col items-center justify-center md:items-start ">
           <div>
             <Reveal>
-              <h2 className="text-7xl font-bold">
+              <h2 className="text-center md:text-start text-4xl md:text-5xl lg:text-5xl  xl:text-7xl font-bold">
                 Hi,
                 <span className="block mt-4">
                   I'm <span className="text-[#9bb3cb] ">Gustavo L.</span>
@@ -28,7 +28,7 @@ export const HeroSection = () => {
               </h2>
             </Reveal>
             <Reveal>
-              <h2 className="text-[4rem] font-bold mt-4">
+              <h2 className="text-2xl text-center md:text-start md:text-[2rem] md:text-[3rem] xl:text-[4rem] font-bold mt-4">
                 <Typewriter
                   words={[
                     "Frontend Developer",
@@ -46,14 +46,14 @@ export const HeroSection = () => {
               </h2>
             </Reveal>
           </div>
-          <div className="mt-16">
+          <div className="mt-12 md:mt-16">
             <Button />
           </div>
           <div className="mt-24">
             <SocialMedia />
           </div>
         </div>
-        <div>
+        <div className="w-[300px] md:w-[300px] lg:w-[470px] mt-6 mb-6 md:mt-0 md:mb-0">
           <Reveal>
             <Image
               src={imageHeroSection}

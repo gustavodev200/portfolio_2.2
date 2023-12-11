@@ -15,24 +15,27 @@ const tecnologies = [
 
 const About = () => {
   return (
-    <div className="w-full h-[90vh] flex flex-col" id="about">
+    <div
+      className="w-full h-auto md:mb-32 flex flex-col items-center p-2 md:p-10 lg:p-10 xl:p-0"
+      id="about"
+    >
       <TitlePage text="Sobre" />
 
-      <main className="grid md:grid-cols-2 mt-[4rem]">
-        <div>
+      <main className="grid grid-cols-1 md:grid-cols-2 md:mt-[4rem]">
+        <div className="flex items-center justify-center w-[100%] md:w-[400px] mb-6 md:mb-0">
           <Reveal>
             <Image
               src={imageAbout}
               alt="sobre"
               width={400}
               height={400}
-              className="rounded-2xl dark:shadow-[5px_5px_0px_0px_rgba(257,257,257)] shadow-[5px_5px_0px_0px_rgba(000,000,000,0.2)]"
+              className="w-[300px] lg:w-[400px] rounded-2xl dark:shadow-[5px_5px_0px_0px_rgba(257,257,257)] shadow-[5px_5px_0px_0px_rgba(000,000,000,0.2)]"
             />
           </Reveal>
         </div>
-        <div className="flex items-center backdrop-blur-md dark:bg-[#192533]/30 bg-[#c4c4c4]/20 p-4 rounded-2xl">
+        <div className="flex items-center backdrop-blur-md dark:bg-[#192533]/30 bg-[#c4c4c4]/20 p-2 md:p-4 rounded-2xl mb-6 md:mb-0">
           <Reveal>
-            <p className="text-justify ">
+            <p className="text-[0.9rem] lg:text-[1rem] text-center lg:text-justify">
               Com mais de um ano dedicado aos estudos de Desenvolvimento
               Frontend, continuo em busca constante de desafios para aprimorar
               minhas habilidades. Meu foco está na construção de uma carreira
@@ -42,7 +45,7 @@ const About = () => {
               desenvolvimento e na construção de interfaces responsivas.
             </p>
 
-            <p className="mt-2 text-justify ">
+            <p className="text-[0.9rem] lg:text-[1rem] mt-2 text-center lg:text-justify">
               Sou um candidato comprometido, habilidoso e persistente,
               valorizando a sinceridade e o comprometimento na colaboração em
               equipe. Meu objetivo é ingressar no mercado como desenvolvedor
@@ -50,7 +53,7 @@ const About = () => {
               {tecnologies.map((tech) => (
                 <span
                   key={tech}
-                  className="p-1 mr-2 text-sm  bg-[#9bb3cb] text-black font-bold rounded-sm dark:shadow-[3px_3px_0px_0px_rgba(257,257,257)] shadow-[5px_5px_0px_0px_rgba(000,000,000,0.2)]"
+                  className="md:p-1 p-0 mr-2 text-sm bg-[#9bb3cb] text-black font-bold rounded-sm dark:shadow-[3px_3px_0px_0px_rgba(257,257,257)] shadow-[5px_5px_0px_0px_rgba(000,000,000,0.2)]"
                 >
                   {tech}
                 </span>
