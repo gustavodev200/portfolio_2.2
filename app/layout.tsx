@@ -3,6 +3,9 @@ import "./globals.css";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { NavBar } from "../components/NavBar";
 import { GeistMono } from "geist/font/mono";
+import Toaster from "@/components/Toaster";
+import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Gustavo Lage",
@@ -24,10 +27,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Toaster />
           <div className="flex justify-center flex-col mx-auto max-w-7xl gap-2 h-auto">
             <NavBar />
             {children}
           </div>
+
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
