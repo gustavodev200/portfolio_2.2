@@ -9,6 +9,7 @@ import { Typewriter } from "react-simple-typewriter";
 import SocialMedia from "../../../components/SocialMedia";
 import { RevealList, RevealWrapper } from "next-reveal";
 import Reveal from "@/components/Reveal";
+import CryptonButton from "../../../components/CryptoButton";
 
 export const HeroSection = () => {
   return (
@@ -47,7 +48,9 @@ export const HeroSection = () => {
             </Reveal>
           </div>
           <div className="mt-12 md:mt-16">
-            <Button />
+            <Reveal>
+              <CryptonButton />
+            </Reveal>
           </div>
           <div className="mt-24">
             <SocialMedia />

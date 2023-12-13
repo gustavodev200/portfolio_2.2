@@ -21,17 +21,35 @@ const Projects = () => {
             <Project.Technologies technologies={project.technologies} />
 
             <Project.ActionsContainer>
-              <Project.Links
-                text="Link"
-                icon={<Globe />}
-                link={project.github as string}
-              />
+              {project.link ? (
+                <Project.Links
+                  text="Link"
+                  icon={<Globe />}
+                  link={project.link as string}
+                />
+              ) : null}
 
               <Project.Links
                 text="Github"
                 icon={<Github />}
                 link={project.github as string}
               />
+
+              {project.github2 ? (
+                <Project.Links
+                  text="Github Client"
+                  icon={<Github />}
+                  link={project.github2 as string}
+                />
+              ) : null}
+
+              {project.github3 ? (
+                <Project.Links
+                  text="Github API"
+                  icon={<Github />}
+                  link={project.github3 as string}
+                />
+              ) : null}
             </Project.ActionsContainer>
           </Project.Root>
         ))}

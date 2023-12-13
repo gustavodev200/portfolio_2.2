@@ -9,9 +9,17 @@ interface ProjectLinksProps {
 }
 
 const ProjectLinks = ({ icon, text, link }: ProjectLinksProps) => {
-  return (
-    <Link href={link} target="_blank">
+  if (!link) {
+    return (
       <Button>
+        {icon} <span className="ml-2">{text}</span>
+      </Button>
+    );
+  }
+
+  return (
+    <Link href={link} target="_blank" className="w-full lg:w-auto">
+      <Button className="w-full xl:w-auto">
         {icon} <span className="ml-2">{text}</span>
       </Button>
     </Link>

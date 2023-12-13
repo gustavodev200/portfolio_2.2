@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
 import NavBarLogo from "./components/NavBarLogo";
 import NavBarTheme from "./components/NavBarTheme";
 import { Menu, X } from "lucide-react";
@@ -46,7 +45,8 @@ const linksForNavBar = [
 ];
 
 export const NavBar = () => {
-  const [state, setState] = React.useState(false);
+  const [state, setState] = useState(false);
+  const [activePage, setActivePage] = useState("Home");
 
   const scrollToAnchor = useScrollToAnchor();
   return (
@@ -83,10 +83,18 @@ export const NavBar = () => {
                       key={link.name}
                       style={{
                         cursor: "pointer",
+                        fontWeight:
+                          link.name === activePage ? "bold" : "normal",
+                        background: link.name === activePage ? "#9bb3cb" : "",
                       }}
-                      className={navigationMenuTriggerStyle()}
+                      className={`${navigationMenuTriggerStyle()} ${
+                        link.name === activePage
+                          ? "bg-[#9bb3cb] dark:shadow-[5px_5px_0px_0px_rgba(257,257,257)]  shadow-[5px_5px_0px_0px_rgba(000,000,000,0.2)]"
+                          : ""
+                      }`}
                       onClick={() => {
                         scrollToAnchor(link.path);
+                        setActivePage(link.name);
                       }}
                     >
                       {link.name}
