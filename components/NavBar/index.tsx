@@ -50,7 +50,7 @@ export const NavBar = () => {
 
   const scrollToAnchor = useScrollToAnchor();
   return (
-    <nav className=" w-full  md:border-0 fixed top-0 left-0 dark:bg-[#09090b] bg-white z-30 shadow-sm md:px-10 lg:px-10">
+    <nav className="w-full  md:border-0 fixed top-0 left-0 dark:bg-[#09090b] bg-white z-30 shadow-sm md:px-10 lg:px-10">
       <div className="items-center px-2 lg:px-0 max-w-screen-xl mx-auto md:flex">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           <button

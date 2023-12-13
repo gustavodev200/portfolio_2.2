@@ -17,7 +17,7 @@ const SocialMedia = () => {
     },
     {
       name: "email",
-      link: "gustavolage200@gmail.com",
+      link: "https://portfolio_2.2.vercel.app/",
       icon: <Mail />,
     },
   ];
